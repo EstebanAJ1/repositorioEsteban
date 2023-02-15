@@ -5,14 +5,14 @@ class Persona():
         self.__genero = ""
 
 #Setters
-    def asignarNombre(self,nombre):
-        self.__nombre = nombre   
+    def asignarNombre(self,rol):
+        self.__nombre = input(f"Ingrese el nombre del {rol}: ")   
 
-    def asignarCedula(self,cedula):
-        self.__cedula = cedula
+    def asignarCedula(self,rol):
+        self.__cedula = input(f"Ingrese la cedula del {rol}: ")  
 
-    def asignarGenero(self,genero):
-        self.__genero = genero
+    def asignarGenero(self,rol):
+        self.__genero = input(f"Ingrese el genero del {rol}: ")  
 
 # getters
     def verNombre(self):
@@ -28,8 +28,8 @@ class Paciente(Persona):
     def __init__(self):
         self.__servicio = ""
     
-    def asignarServicio(self, servicio):
-        self.__servicio = servicio
+    def asignarServicio(self, rol):
+        self.__servicio = input(f"Ingrese el servicio del {rol}: ")
 
     def verServicio(self):
         return self.__servicio
@@ -64,12 +64,24 @@ class Medico(Empleado_Hospital):
     def verEspecialidad(self):
         return self.__especialidad
 
+class Sistema(Persona):
+    def __init__(self):
+        self.__lista_pacientes = []
+        
+    def numPacientes(self):
+        self.__numero_pacientes = len(self.__lista_pacientes)
+        return self.__numero_pacientes
 
-p1 = Paciente()
-p2 = Paciente()
-p1.asignarNombre("Juan")
-p1.asignarCedula(1097873)
-p1.asignarGenero("Hombre")
-print(p1.verNombre())
-#print(p1.verGenero())
-#print(p1.verCedula())
+    def ingresarPaciente(self, rol):
+        p = Paciente()
+        p.asignarNombre(rol)
+        p.asignarCedula(rol)
+        p.asignarGenero(rol)
+        p.asignarServicio(rol)
+        self.__lista_pacientes.append(p)
+        print(self.numPacientes())
+
+
+p1 = Sistema()
+p1.ingresarPaciente("Paciente")
+
