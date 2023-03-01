@@ -1,6 +1,6 @@
 import pymongo
 
-class Medicamento:
+class Medicamento():
     def __init__(self, client):
         mydb = client["ClinVeterinaria"]
         self.__medicamentos = mydb["medicamentos"]
