@@ -11,6 +11,7 @@ x =mycol.insert_one(mydict)
 
 print(x.inserted_id)
 
+#Para actualizar valores
 myquery = {"nombre": "Esteban", "direccion": "C/ Mayor 1" }
 newvalues = {"$set": {"nombre":"Luis"}}
 
