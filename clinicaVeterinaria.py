@@ -19,8 +19,9 @@ class Medicamento():
 
 def main():
     
-    client = pymongo.MongoClient("mongodb+srv://EstebanAJ1:<password>@cluster0.6v6oixp.mongodb.net/?retryWrites=true&w=majority")
+    client = pymongo.MongoClient("mongodb+srv://EstebanAJ1:<info2>@cluster0.6v6oixp.mongodb.net/?retryWrites=true&w=majority")
     db = client.test
+
     nm = int(input("Ingrese la cantidad de medicamento de la mascota: "))
     m = 0
     while m<nm:
@@ -33,6 +34,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
 
 
 
