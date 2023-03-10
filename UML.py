@@ -3,6 +3,7 @@ class cosa:
         self.publico = publico
         self._protegido = protegido
         self.__privado = privado
+        print(self.__privado)
 
     def informacion(self):
         print(
