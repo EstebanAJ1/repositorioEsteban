@@ -25,3 +25,16 @@ for y in mycol.find():
 for x in mycol.find({"nombre": "Luis"}): 
     print(x)
     #print(x["nombre"])
+
+#def verNombre(self):      DE MANERA MAS GENERAL, PARA QUE ME TRAIGA LOS NOMBRES
+    #    for x in self.__medicamentos.find({"Nombre"}):
+    #        return print(x)
+
+#def verNombre(self,nombre):
+ #       for x in self.__medicamentos.find({"Nombre": nombre}):
+  #          return print(x)
+        
+    
+   # def verDosis(self,dosis):
+    #    for x in self.__medicamentos.find({"Dosis": dosis}):
+     #       return print(x)
