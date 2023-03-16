@@ -106,6 +106,8 @@ class Sistema(Persona):
         cedula = (input("Ingresar la cedula del paciente que busca en el diccionario: "))
         for p, c in enumerate(self.__diccionario_paciente["Cedula"]):
             if cedula == c:
+                print(self.__diccionario_paciente)
+                print(p,c)
                 print(f"Nombre: {self.__diccionario_paciente['Nombre'][p]} ")
 
 def main():
@@ -123,6 +125,7 @@ def main():
 
         elif opcion == 2:
             p.verDatosPacientesDiccionario()
+            #p.verDatosPacientesLista()
 
         elif opcion == 3:
             p.numPacientes()
