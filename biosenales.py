@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 #estoy cargando unos datos que fueron previamente recolectados
 #usamos el sio para cargar los datos
-path = r'E:\Academico\Universidad\Cursos\Repositorios\Info-2\Senales\C001R_EP_reposo.mat'
+path = r'C:\Users\Alvarez Jaramillo\Downloads\C001R_EP_reposo.mat'
 mat_contents = sio.loadmat(path) 
 print('La variable cargada es del tipo: ' + str(type(mat_contents))) 
 print('las llaves son: ' + str(mat_contents.keys())) 
