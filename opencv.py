@@ -2,7 +2,7 @@
 import cv2
 
 #Leer la imagen
-path = r"C:\Users\SALASDRAI\Downloads\Imagenes\imagen.jpg"
+path = r"C:\Users\Alvarez Jaramillo\Desktop\Esteban\Info 2\repositorioEsteban\imagen.jpg"
 img=cv2.imread(path)
 
 #Caracteristicas

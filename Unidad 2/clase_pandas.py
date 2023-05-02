@@ -33,7 +33,7 @@ print("="*50)
 print(mmse["Escolaridad"].describe())
 print("="*50)
 # CARGAR UN ARCHIVO
-# Axis = 1 me representa las columnas, y Axis = 0 me representa las filas
+# Axis = 0 me representa las columnas, y Axis = 1 me representa las filas
 mmse_copy = mmse.copy()
 mmse_copy = mmse_copy.assign(falseindex = np.random.rand(23))
 mmse_copy = mmse_copy.set_index("Codigo")

@@ -1,6 +1,6 @@
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://EstebanAJ1:esteban123@cluster0.6v6oixp.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://EstebanAJ1:info2@cluster0.6v6oixp.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
 
 mydb = client["bbdd"] # Base de datos
@@ -21,6 +21,7 @@ mycol.update_one(myquery, newvalues)
 for y in mycol.find(): 
     print(y)
     
+print("="*25)
 # Buscar un dato en especifico de la base de datos
 for x in mycol.find({"nombre": "Luis"}): 
     print(x)
