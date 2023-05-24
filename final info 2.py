@@ -42,14 +42,14 @@ with mp_pose.Pose(
 
                # Calcular el ángulo
                angle = degrees(acos((l1**2 + l3**2 - l2**2) / (2 * l1 * l3)))
-               if angle >= 160:
-                    up = True
-               if up == True and down == False and angle <= 70:
-                    down = True
-               if up == True and down == True and angle >= 160:
-                    count += 1
-                    up = False
-                    down = False
+               # if angle >= 160:
+               #      up = True
+               # if up == True and down == False and angle <= 70:
+               #      down = True
+               # if up == True and down == True and angle >= 160:
+               #      count += 1
+               #      up = False
+               #      down = False
 
                #print("count: ", count)
                # Visualización
@@ -65,9 +65,9 @@ with mp_pose.Pose(
                cv2.circle(output, (x1, y1), 6, (0, 255, 255), 4)
                cv2.circle(output, (x2, y2), 6, (128, 0, 250), 4)
                cv2.circle(output, (x3, y3), 6, (255, 191, 0), 4)
-               cv2.rectangle(output, (0, 0), (60, 60), (255, 255, 0), -1)
+               #cv2.rectangle(output, (0, 0), (60, 60), (255, 255, 0), -1)
                cv2.putText(output, str(int(angle)), (x2 + 30, y2), 1, 1.5, (128, 0, 250), 2)
-               cv2.putText(output, str(count), (10, 50), 1, 3.5, (128, 0, 250), 2)
+               #cv2.putText(output, str(count), (10, 50), 1, 3.5, (128, 0, 250), 2)
                cv2.imshow("output", output)
           cv2.imshow("Frame", frame)
           if cv2.waitKey(1) & 0xFF == 27:
